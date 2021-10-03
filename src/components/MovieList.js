@@ -5,10 +5,11 @@ import { Button, Card } from 'react-bootstrap';
 
 const MovieList = (props) => {
     const posterUrl = "https://image.tmdb.org/t/p/original/";
-    //console.log(props);
+    console.log(`my props: ${props.movies}`);
     return(
         <>
             {props.movies.map((movie,index) =>
+            //console.log(movie)
             <div className="movieDiv d-flex justify-content-start m-3 flex-row">
                 <Card className="movieCard"> 
                     <Card.Img variant="top" src={posterUrl+movie.poster_path} className="cardImg" height="200rem"/>

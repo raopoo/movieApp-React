@@ -42,12 +42,14 @@ function App(){
         const url = "https://api.themoviedb.org/3/movie/popular?api_key=0bb6bae245d4da7f34903447b12c0209";
         const response = await fetch(url);
         const responseJson = response.json();
-        //const obj = responseJson.PromiseResult.results;
+       
         //console.log(responseJson);
-        const results = responseJson.then((result) => {
-          console.log(result.results)
+        const results = await responseJson.then((result) => {
+          console.log(`Find:${result}`)
+          console.table(result)
             //return([result.poster_path,result.title,result.vote_average,result.vote_count])
             return(result.results);
+            
         })
         //console.log(obj);
       //  const poster = responseJson.results.poster_path;
