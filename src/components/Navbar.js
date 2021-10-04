@@ -1,24 +1,18 @@
 import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
+import { Button, Nav, Navbar, NavDropdown,Container } from 'react-bootstrap';
 
 const NavbarComponent = () => {
     return(
-        <Navbar collapseOnSelect bg="light" variant="light" className="navClass"  >
-  <Container>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="me-auto">
-    <Navbar.Brand href="#home">
-      <img
-        src="./images/logo.jpg"
-        width="60"
-        height="60"
-        className="d-inline-block align-left"
-        alt="Movie logo"
-      />
-    </Navbar.Brand>
+        <Navbar collapseOnSelect bg="dark" variant="dark" className="container-fluid justify-content-around">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
+        <Container>
+          <Navbar.Brand href="#home">Martin'sMovies</Navbar.Brand>
+        </Container>
+        <Container className="justify-content-center d-flex flex-row">
      <NavDropdown title="Home" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Home Version 1</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Home Version 2</NavDropdown.Item>
@@ -51,11 +45,13 @@ const NavbarComponent = () => {
         <NavDropdown.Item href="#action/3.3">Post with Audio</NavDropdown.Item>
       </NavDropdown>
       <Nav.Link href="#features">Contact Us</Nav.Link>
-      <Nav className="text"><a href="#home"><img src="../images/searchicon.png" alt="" /></a></Nav>
-      <Button variant="outline-success">Login</Button>
+      </Container>
+      <Container className="d-flex justify-content-end">
+        <Nav className="text"><a href="#home"><img src="../images/searchicon.png" alt="" /></a></Nav>
+        <Button variant="primary" size="sm">Login</Button>
+      </Container>
       </Nav>
       </Navbar.Collapse>
-  </Container>
   </Navbar>
     )
 }
