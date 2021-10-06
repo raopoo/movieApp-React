@@ -3,6 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+.navClass{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+#navBtn{
+  width: 8rem;
+  height: 2.5rem;
+}
 .cardImg{
-  height: 15rem;
+  height: 20rem;
+  width: 30rem;
+}
+#movieList{
+   padding: 20px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-areas: "card";
+   
+}
+.movieCard{
+  grid-area: card;
+  align-items: center;
+  display: flex;
+} 
+.flexible{
+  flex-grow: 1;
 }

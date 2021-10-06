@@ -5,7 +5,7 @@ import { Button, Nav, Navbar, NavDropdown,Container } from 'react-bootstrap';
 
 const NavbarComponent = () => {
     return(
-        <Navbar collapseOnSelect bg="dark" variant="dark" className="container-fluid justify-content-around">
+        <Navbar collapseOnSelect bg="dark" variant="dark" className="container-fluid navClass">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
@@ -44,11 +44,10 @@ const NavbarComponent = () => {
         <NavDropdown.Item href="#action/3.3">Post with YouTube</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Post with Audio</NavDropdown.Item>
       </NavDropdown>
-      <Nav.Link href="#features">Contact Us</Nav.Link>
+      <Nav.Link href="#features">ContactUs</Nav.Link>
       </Container>
-      <Container className="d-flex justify-content-end">
-        <Nav className="text"><a href="#home"><img src="../images/searchicon.png" alt="" /></a></Nav>
-        <Button variant="primary" size="sm">Login</Button>
+      <Container>
+        <Button variant="primary" id="navBtn">Login</Button>
       </Container>
       </Nav>
       </Navbar.Collapse>
